@@ -8,6 +8,10 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+*.pkl
+*.npy
+*.h5
+*.mat
 data/
 build/
 develop-eggs/
