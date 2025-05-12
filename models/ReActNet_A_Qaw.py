@@ -133,7 +133,7 @@ class Reactnet(nn.Module):
                     self.feature.append(firstconv3x3(3, stage_out_channel[i], 2))
                 else:
                     self.feature.append(firstconv3x3(3, stage_out_channel[i], 1))
-            elif stage_out_channel[i-1] != stage_out_channel[i] and stage_out_channel[i] != 64:
+            elif stage_out_channel[i-1] != stage_out_channel[i]:# and stage_out_channel[i] != 64:
                 self.feature.append(BasicBlock(stage_out_channel[i-1], stage_out_channel[i], alpha, beta1, beta2, 2))
                 # Reset expected var at a transition block
                 expected_var = 1.0
