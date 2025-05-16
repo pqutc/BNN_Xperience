@@ -1,0 +1,3 @@
+Chargé 129395 échantillons de 100 classes
+Chargé 5000 échantillons de 100 classes
+learning_rate: 0.001240234375

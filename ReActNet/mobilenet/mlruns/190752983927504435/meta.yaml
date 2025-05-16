@@ -1,0 +1,6 @@
+artifact_location: /raid/lab/plongour/BNN_Xperience/ReActNet/mobilenet/1_step1/../mlruns/190752983927504435
+creation_time: 1747409491693
+experiment_id: '190752983927504435'
+last_update_time: 1747409491693
+lifecycle_stage: active
+name: reactnet_training_step1

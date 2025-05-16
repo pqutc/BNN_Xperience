@@ -1,0 +1,15 @@
+artifact_uri: /raid/lab/plongour/BNN_Xperience/ReActNet/mobilenet/1_step1/../mlruns/190752983927504435/016749f7d1044a979c445a2d05e2064a/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '190752983927504435'
+lifecycle_stage: active
+run_id: 016749f7d1044a979c445a2d05e2064a
+run_name: reactnet_step1
+run_uuid: 016749f7d1044a979c445a2d05e2064a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747409492641
+status: 1
+tags: []
+user_id: plongour

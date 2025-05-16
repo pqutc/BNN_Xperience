@@ -3,7 +3,7 @@ import torch.nn as nn
 from .BNN import *
 
 
-stage_out_channel = [32] + [64] + [128] * 2 + [256] * 2 + [512] * 6 + [1024] * 2
+stage_out_channel = [16] + [32] + [64] + [128] * 2 + [256] * 2 + [512] * 6 + [1024] * 2
 
 def Bconv3x3(in_planes, out_planes, stride=1):
     """3x3 binary convolution with padding"""
@@ -130,10 +130,10 @@ class Reactnet(nn.Module):
                 expected_var += alpha ** 2
                 beta2 = 1. / expected_var ** 0.5
                 if imagenet:
-                    self.feature.append(firstconv3x3(3, stage_out_channel[i], 2))
+                    self.feature.append(firstconv3x3(2, stage_out_channel[i], 2))
                 else:
                     self.feature.append(firstconv3x3(3, stage_out_channel[i], 1))
-            elif stage_out_channel[i-1] != stage_out_channel[i]:# and stage_out_channel[i] != 64:
+            elif stage_out_channel[i-1] != stage_out_channel[i] and stage_out_channel[i] != 64:
                 self.feature.append(BasicBlock(stage_out_channel[i-1], stage_out_channel[i], alpha, beta1, beta2, 2))
                 # Reset expected var at a transition block
                 expected_var = 1.0
